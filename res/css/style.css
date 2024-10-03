@@ -15,7 +15,7 @@ a {
 }
 .nav a {
 	padding: 10px 15px;
-	text-align: right;
+	text-align: left;
 	text-transform: bold;
 	display: block;
 	color: black;
@@ -40,6 +40,10 @@ a {
 	}
 	.header {
 		flex-direction: column;
-		align-items: right;
+		align-items: left;
 	}
+}
+.logo {
+	margin:0;
+	font-size: 1.1em;
 }
