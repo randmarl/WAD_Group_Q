@@ -4,18 +4,26 @@ body {
     background-color: #f4f4f4;
     margin: 0;
     padding: 0;
+    display: flex; /* Use Flexbox on body */
+    flex-direction: column; /* Keep the nav at the top */
+    height: 100vh; /* Full height for the body */
+}
+
+/* Navigation bar styling */
+nav {
+    flex: 0 0 60px; /* Fixed height for the nav */
+    background-color: #333;
 }
 
 nav ul {
-    background-color: #333;
+    display: flex;
+    justify-content: center;
     list-style: none;
     padding: 10px;
-    text-align: center;
     margin: 0;
 }
 
 nav ul li {
-    display: inline;
     margin-right: 20px;
 }
 
@@ -30,30 +38,37 @@ nav ul li a:hover {
     background-color: #555;
 }
 
-/* Login container styling */
+/* Flexbox for the login section */
+.login-section {
+    display: flex; /* Use Flexbox */
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    flex-grow: 1; /* Take remaining space below the nav */
+    text-align: center; /* Center text inside */
+}
+
+/* Welcome message styling */
+.welcome-message {
+    font-size: 24px;
+    margin-bottom: 20px; /* Space between heading and login form */
+}
+
+/* Flexbox for the login form container */
 .login-container {
-    background-color: white;
-    width: 300px;
-    margin: 100px auto;
+    background-color: rgb(209, 209, 209);
+    width: 300px; /* Fixed width */
     padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.login-container h2 {
-    margin-bottom: 20px;
-}
 
-.login-container label {
-    display: block;
-    margin-top: 10px;
-    text-align: left;
-}
-
+/* Styling for the login form elements */
 .login-container input[type="email"],
 .login-container input[type="password"] {
-    width: 100%;
+    width: 80%;
     padding: 10px;
     margin-top: 5px;
     margin-bottom: 15px;
@@ -62,7 +77,7 @@ nav ul li a:hover {
 }
 
 .login-container button {
-    width: 100%;
+    width: 100%; /* Full width for buttons */
     padding: 10px;
     margin-top: 10px;
     border: none;
@@ -88,4 +103,11 @@ nav ul li a:hover {
 .login-container .forgot-btn:hover,
 .login-container .create-btn:hover {
     background-color: #ddd;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .login-container {
+        width: 90%; /* Responsive width for mobile */
+    }
 }
