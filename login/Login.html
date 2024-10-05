@@ -3,33 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
-    <link rel="stylesheet" href="css/style.css"> <!-- Linking to the CSS file -->
+    <title>Login</title>
+    <link href="style.css" rel="stylesheet" />
 </head>
 <body>
     <!-- Navigation bar -->
     <nav>
-        <ul>
+        <ul class="nav-list">
             <li><a href="index.html">Home</a></li>
-            <li><a href="addPost.html">Add Post</a></li>
         </ul>
     </nav>
 
-    <!-- Login form section -->
-    <div class="login-container">
-        <h2>Login</h2>
-        <form action="index.html" method="GET" onsubmit="return validateForm()">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+    <!-- Flexbox layout for login section -->
+    <div class="login-section">
 
-            <label for="password">Password</label>
-            <input type="password" id="password" name="password" placeholder="Enter your password" required>
-
-            <!-- Buttons -->
-            <button type="submit" class="login-btn">Login</button>
-            <button type="button" class="forgot-btn" onclick="forgotPassword()">Forgot Password?</button>
-            <button type="button" class="create-btn" onclick="createAccount()">Create an Account</button>
-        </form>
+        <!-- Login form -->
+        <div class="login-container">
+            <h2 class="welcome-message">Welcome to PostIt</h2>
+            <form action="index.html" method="GET" onsubmit="return validateForm()">
+                <button class="create-btn" onclick="createAccount()" type="button">Create an Account</button>
+                <input id="email" name="email" placeholder="Email" required="" type="email" />
+                <input id="password" name="password" placeholder="Password" required="" type="password" />
+                <!-- Buttons -->
+                <button class="login-btn" type="submit">Login</button>
+                <button class="forgot-btn" onclick="forgotPassword()" type="button">Forgot Password?</button>
+            </form>
+        </div>
     </div>
 
     <!-- Script for validation and redirection -->
