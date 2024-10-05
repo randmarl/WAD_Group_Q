@@ -16,17 +16,6 @@ nav ul li {
     margin-right: 20px;
 }
 
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    padding: 10px 15px;
-    transition: background-color 0.3s ease;
-}
-
-nav ul li a:hover {
-    background-color: #555;
-}
-
 .flex-container {
 	display: flex;
 	flex-direction: row;
@@ -61,7 +50,14 @@ nav ul li a:hover {
 	width: 100%;
 	border-radius: 5px;
 }
-
+.post-logo ~ p {
+	text-align: left;
+	margin: 5px;
+}
+.nav > li:not(:has(a)) {
+	color: white;
+	font-size: 30px;
+}
 img + p {
 	font-style: italic;
 }
@@ -115,7 +111,6 @@ ul {
 	padding: 10px 15px;
 	text-align: left;
 	display: block;
-	color: black;
 	text-decoration: none;
 	color: white;
 }
