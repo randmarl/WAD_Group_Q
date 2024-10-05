@@ -15,7 +15,6 @@ nav ul {
 nav ul li {
     margin-right: 20px;
 }
-
 .flex-container {
 	display: flex;
 	flex-direction: row;
@@ -191,6 +190,30 @@ ul {
 .login-container .forgot-btn:hover,
 .login-container .create-btn:hover {
     background-color: #ddd;
+}
+#textarea {/* text area on the addPost page*/
+  width: 80%;
+  height: 100px;
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+.file-btn { /* Design of the button for choosing a file */
+	  display: block;
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+		background-color: #eee; /* Match style of forgot-btn and create-btn */
+    color: #333;
+		display: inline-block;/* inline-block so the margins and padding of all the element look ok*/
+}
+/* Hover effect */
+.file-btn:hover {
+    background-color: #ddd; /* Match hover effect */
 }
 
 /* Responsive Design */
