@@ -1,3 +1,33 @@
+/* Navigation bar styling */
+nav {
+    flex: 0 0 60px; /* Fixed height for the nav */
+    background-color: #333;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+}
+
+
 .flex-container {
 	display: flex;
 	flex-direction: row;
@@ -18,8 +48,15 @@
 }
 html, body {
 	height: 100vh;
+	font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
 	margin: 0;
-	display: grid;
+	padding: 0;
+	/* display: grid; */
+
+	display: flex; /* Use Flexbox on body */
+    flex-direction: column; /* Keep the nav at the top */
+
 	grid-template-rows: 15% 75% 10%;
 	background-color: white;
 }
@@ -71,4 +108,78 @@ ul {
 .logo {
 	padding: 10px 15px;
 	margin: 0;
+}
+
+/* Flexbox for the login section */
+.login-section {
+    display: flex; /* Use Flexbox */
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    flex-grow: 1; /* Take remaining space below the nav */
+    text-align: center; /* Center text inside */
+}
+
+/* Welcome message styling */
+.welcome-message {
+    font-size: 24px;
+    margin-bottom: 20px; /* Space between heading and login form */
+}
+
+/* Flexbox for the login form container */
+.login-container {
+    background-color: rgb(209, 209, 209);
+    width: 300px; /* Fixed width */
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Styling for the login form elements */
+.login-container input[type="email"],
+.login-container input[type="password"] {
+    width: 80%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.login-container button {
+    width: 100%; /* Full width for buttons */
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-container .login-btn {
+    background-color: #333;
+    color: white;
+}
+
+.login-container .forgot-btn,
+.login-container .create-btn {
+    background-color: #eee;
+    color: #333;
+}
+
+.login-container .login-btn:hover {
+    background-color: #555;
+}
+
+.login-container .forgot-btn:hover,
+.login-container .create-btn:hover {
+    background-color: #ddd;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .login-container {
+        width: 90%; /* Responsive width for mobile */
+    }
 }
