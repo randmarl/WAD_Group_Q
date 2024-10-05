@@ -4,11 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Page</title>
-    <link rel="stylesheet" href="css/style.css"> 
+    <link rel="stylesheet" href="css/style.css"> <!-- Linking to the CSS file -->
 </head>
 <body>
-
-  
+    <!-- Navigation bar -->
     <nav>
         <ul>
             <li><a href="index.html">Home</a></li>
@@ -16,31 +15,43 @@
         </ul>
     </nav>
 
-    <section class="login-form">
-        <h1>Login</h1>
+    <!-- Login form section -->
+    <div class="login-container">
+        <h2>Login</h2>
         <form action="index.html" method="GET" onsubmit="return validateForm()">
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
 
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required>
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required>
 
-            <button type="submit">Login</button>
+            <!-- Buttons -->
+            <button type="submit" class="login-btn">Login</button>
+            <button type="button" class="forgot-btn" onclick="forgotPassword()">Forgot Password?</button>
+            <button type="button" class="create-btn" onclick="createAccount()">Create an Account</button>
         </form>
-    </section>
+    </div>
 
+    <!-- Script for validation and redirection -->
     <script>
         function validateForm() {
             const email = document.getElementById('email').value;
             const password = document.getElementById('password').value;
 
             if (!email || !password) {
-                alert("Both fields must be filled out!");
+                alert("Please fill in both fields.");
                 return false;
             }
-            return true;
+            return true; // Redirects to index.html on success
+        }
+
+        function forgotPassword() {
+            window.location.href = "forgotPassword.html"; // Redirect to forgot password page
+        }
+
+        function createAccount() {
+            window.location.href = "createAccount.html"; // Redirect to create account page
         }
     </script>
-
 </body>
 </html>
