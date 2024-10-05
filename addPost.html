@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> Add Post</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <nav>
+      <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+      </ul>
+  </nav>
+  <div class="login-section"> <!-- Container for the adding the post section -->
+    <div class="login-container"> <!-- Main container for the form -->
+    <h2 class="welcome-message">You can add posts here</h2> <!-- Welcome message -->
+    <form action="index.html" method="GET"> <!-- Form that redirects to index.html on submission -->
+            <!-- Create Text Section -->
+        <label for="post-text">Create Text:</label> <!-- Label for the textarea -->
+        <textarea id="textarea" name="post-text" placeholder="Write your post here..." required></textarea> <!-- Textarea for input -->
+            <!-- Choose File Section -->
+        <div class="file-input-container"> <!-- Container for file input -->
+            <span>Select file: </span> <!-- Text prompting user to select a file -->
+            <label for="file-input" class="file-btn">Choose file</label> <!-- Label styled as a button -->
+            <input type="file" id="file-input" name="file-input" style="display: none;"> <!-- Hidden file input -->
+        </div>
+            <!-- Submit Button -->
+        <button class="login-btn" type="submit">Create Post</button> <!-- Button to submit the form -->
+    </form>
+    </div>
+  </div>
+
+</body>
+</html>
