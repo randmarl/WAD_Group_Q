@@ -1,4 +1,4 @@
-
+/* general */
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
@@ -9,7 +9,7 @@ body {
     height: 100vh; 
 }
 
-
+/* navigation menu */
 nav {
     flex: 0 0 60px; 
     background-color: #333;
@@ -38,7 +38,7 @@ nav ul li a:hover {
     background-color: #555;
 }
 
-
+/* login */
 .login-section {
     display: flex; 
     flex-direction: column; 
@@ -48,13 +48,13 @@ nav ul li a:hover {
     text-align: center;
 }
 
-
+/* hello message */
 .welcome-message {
     font-size: 24px;
     margin-bottom: 20px; 
 }
 
-
+/* containers */
 .login-container {
     background-color: rgb(209, 209, 209);
     width: 300px; /* Fixed width */
@@ -65,7 +65,7 @@ nav ul li a:hover {
 }
 
 
-
+/* login elements */
 .login-container input[type="email"],
 .login-container input[type="password"] {
     width: 80%;
@@ -73,7 +73,7 @@ nav ul li a:hover {
     margin-top: 5px;
     margin-bottom: 15px;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 5px; /* corners rounded*/
 }
 
 .login-container button {
@@ -82,7 +82,7 @@ nav ul li a:hover {
     margin-top: 10px;
     border: none;
     border-radius: 5px;
-    cursor: pointer;
+    cursor: pointer; /* the cursor changes to a hand icon */
 }
 
 .login-container .login-btn {
@@ -105,9 +105,9 @@ nav ul li a:hover {
     background-color: #ddd;
 }
 
-
+/* responsive design */
 @media (max-width: 600px) {
     .login-container {
-        width: 90%; 
+        width: 90%; /* responsive width for mobile */
     }
 }
