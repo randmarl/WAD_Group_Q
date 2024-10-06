@@ -2,49 +2,55 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!-- beautifully displayed on different devices: -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    <!-- linking to css file -->
     <link href="res/css/style.css" rel="stylesheet" />
 </head>
 <body>
+    <!-- navigation menu -->
     <nav>
         <ul class="nav">
-            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html">Home</a></li> <!-- link to homepage -->
         </ul>
     </nav>
-
+    <!-- Flexbox layout for login section -->
     <div class="login-section">
-
+        <!-- login form -->
         <div class="login-container">
             <h2 class="welcome-message">Welcome to PostIt</h2>
+            <!-- sends the data to the index.html page with the GET method -->
             <form action="index.html" method="GET" onsubmit="return validateForm()">
                 <button class="create-btn" onclick="createAccount()" type="button">Create an Account</button>
+                <!-- email input that is mandatory -->
                 <input id="email" name="email" placeholder="Email" required="" type="email" />
+                <!-- password input, which is mandatory -->
                 <input id="password" name="password" placeholder="Password" required="" type="password" />
-                
+                <!-- buttons -->
                 <button class="login-btn" type="submit">Login</button>
                 <button class="forgot-btn" onclick="forgotPassword()" type="button">Forgot Password?</button>
             </form>
         </div>
     </div>
 
-    
+    <!-- gmail and password entry stuff -->
     <script>
         function validateForm() {
             const email = document.getElementById('email').value;
             const password = document.getElementById('password').value;
-
+            // whether both fields are filled:
             if (!email || !password) {
                 alert("Please fill in both fields.");
                 return false;
             }
             return true; 
         }
-
+        //forgotten password function:
         function forgotPassword() {
             window.location.href = "ForgotPassword.html"; 
         }
-
+        // new account function
         function createAccount() {
             window.location.href = "CreateAccount.html"; 
         }
