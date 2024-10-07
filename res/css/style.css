@@ -137,24 +137,24 @@ ul {
 
 /* Flexbox for the login section */
 .login-section {
-    display: flex; /* Use Flexbox */
-    flex-direction: column; /* Stack items vertically */
-    justify-content: center; /* Center content vertically */
-    align-items: center; /* Center content horizontally */
-    flex-grow: 1; /* Take remaining space below the nav */
-    text-align: center; /* Center text inside */
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    flex-grow: 1; 
+    text-align: center; 
 }
 
 /* Welcome message styling */
 .welcome-message {
     font-size: 24px;
-    margin-bottom: 20px; /* Space between heading and login form */
+    margin-bottom: 20px; 
 }
 
 /* Flexbox for the login form container */
 .login-container {
     background-color: rgb(209, 209, 209);
-    width: 300px; /* Fixed width */
+    width: 300px; 
     padding: 20px;
     border-radius: 8px;
     text-align: center;
