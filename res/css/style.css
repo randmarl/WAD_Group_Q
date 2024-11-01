@@ -1,6 +1,6 @@
-/* Navigation bar styling */
+
 nav {
-    flex: 0 0 60px; /* Fixed height for the nav */
+    flex: 0 0 60px;
     background-color: #333;
 }
 
@@ -18,7 +18,7 @@ nav ul li {
 nav ul li a:hover {
     background-color: #555;
 }
-/*Posts section styling*/
+
 .flex-container {
 	display: flex;
 	flex-direction: row;
@@ -26,13 +26,13 @@ nav ul li a:hover {
 	width: 100%;
 	height: 75vh;
 }
-/*Posts column styling*/
+
 .posts {
 	background-color: white;
 	aspect-ratio: 3 / 4;
 	overflow-y: auto;
 }
-/*Post entity styling and more*/
+
 .post {
 	background-color: rgb(209, 209, 209);
 	border-radius: 10px;
@@ -55,17 +55,17 @@ nav ul li a:hover {
 	width: 100%;
 	border-radius: 5px;
 }
-/*General sibling selector in use*/
+
 .post-logo ~ p {
 	text-align: left;
 	margin: 5px;
 }
-/*Child selector in use*/
+
 .nav > li:not(:has(a)) {
 	color: white;
 	font-size: 30px;
 }
-/*Adjecent sibling selector in use*/
+
 img + p {
 	font-style: italic;
 }
@@ -74,7 +74,7 @@ img + p {
 	height: 25px;
 	margin: 5px;
 }
-/*Styling for the sidebars surrounding the posts field*/
+
 .side-panel {
 	flex: 1;
 	background-color: rgb(209, 209, 209);
@@ -85,8 +85,8 @@ html, body {
     background-color: #f4f4f4;
 	margin: 0;
 	padding: 0;
-	display: flex; /* Use Flexbox on body */
-    flex-direction: column; /* Keep the nav at the top */
+	display: flex; 
+    flex-direction: column;
 }
 .grid {
 	display: flex;
@@ -135,7 +135,7 @@ ul {
 	margin: 0;
 }
 
-/* Flexbox for the login section */
+
 .login-section {
     display: flex; 
     flex-direction: column; 
@@ -145,13 +145,13 @@ ul {
     text-align: center; 
 }
 
-/* Welcome message styling */
+
 .welcome-message {
     font-size: 24px;
     margin-bottom: 20px; 
 }
 
-/* Flexbox for the login form container */
+
 .login-container {
     background-color: rgb(209, 209, 209);
     width: 300px; 
@@ -162,7 +162,7 @@ ul {
 }
 
 
-/* Styling for the login form elements */
+
 .login-container input[type="email"],
 .login-container input[type="password"] {
     width: 80%;
@@ -174,7 +174,7 @@ ul {
 }
 
 .login-container button {
-    width: 100%; /* Full width for buttons */
+    width: 100%;
     padding: 10px;
     margin-top: 10px;
     border: none;
@@ -201,7 +201,7 @@ ul {
 .login-container .create-btn:hover {
     background-color: #ddd;
 }
-#textarea {/* text area on the addPost page*/
+#textarea {
   width: 80%;
   height: 100px;
   margin-bottom: 15px;
@@ -209,7 +209,7 @@ ul {
   border-radius: 5px;
   border: 1px solid #ccc;
 }
-.file-btn { /* Design of the button for choosing a file */
+.file-btn { 
 	  display: block;
     width: 90%;
     padding: 10px;
@@ -217,18 +217,18 @@ ul {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-		background-color: #eee; /* Match style of forgot-btn and create-btn */
+		background-color: #eee; 
     color: #333;
-		display: inline-block;/* inline-block so the margins and padding of all the element look ok*/
-}
-/* Hover effect */
-.file-btn:hover {
-    background-color: #ddd; /* Match hover effect */
+		display: inline-block;
 }
 
-/* Responsive Design */
+.file-btn:hover {
+    background-color: #ddd;
+}
+
+
 @media (max-width: 600px) {
     .login-container {
-        width: 90%; /* Responsive width for mobile */
+        width: 90%; 
     }
 }
