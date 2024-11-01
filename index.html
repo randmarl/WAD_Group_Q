@@ -1,93 +1,88 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Home</title>
-	<link rel="stylesheet" type="text/css" href="res/css/style.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home</title>
+    <link rel="stylesheet" type="text/css" href="res/css/style.css">
 </head>
 <body>
-	<div class="grid header">
-		<ul class="nav">
-			<li><a href="index.html">Home</a></li>
-			<li> | </li>
-			<li><a href="addPost.html">addPost</a></li>
-		</ul>
-		<a class="logo" href="Login.html"><img src="res/images/pfp.jpg" width="50" height="50" alt="My pfp"></a>
-	</div>
-	<div class="grid content">
-	<div class="flex-container">
-		<div class="side-panel"> </div>
-		<div class="posts">
-			<div class="post">
-				<div class="post-header">
-					<a class="post-logo" href="#"><img src="res/images/pfp.jpg" width="50" height="50" alt="My pfp"></a>
-					<p>Oct 5, 2012</p>
-				</div>
-				<div class="post-content">
-					<img class="post-photo" src="res/images/bridge.jpg">
-					<p>Nice bridge!</p>
-				</div>
-				<div class="post-footer">
-					<img class="like" src="res/images/Facebook_logo_thumbs_up_like_transparent_SVG.svg">
-				</div>
-			</div>
-			<div class="post">
-				<div class="post-header">
-					<a class="post-logo" href="#"><img src="res/images/pfp.jpg" width="50" height="50" alt="My pfp"></a>
-					<p>Jan 2, 2021</p>
-				</div>
-				<div class="post-content">
-					<img class="post-photo" src="res/images/mnt.jpg">
-					<p>Look... 👀</p>
-				</div>
-				<div class="post-footer">
-					<img class="like" src="res/images/Facebook_logo_thumbs_up_like_transparent_SVG.svg">
-				</div>
-			</div>
-			<div class="post">
-				<div class="post-header">
-					<a class="post-logo" href="#"><img src="res/images/pfp.jpg" width="50" height="50" alt="My pfp"></a>
-					<p>Oct 2, 2022</p>
-				</div>
-				<div class="post-content">
-					<p>Blah-blah-blah...</p>
-				</div>
-				<div class="post-footer">
-					<img class="like" src="res/images/Facebook_logo_thumbs_up_like_transparent_SVG.svg">
-				</div>
-			</div>
-			<div class="post">
-				<div class="post-header">
-					<a class="post-logo" href="#"><img src="res/images/pfp.jpg" width="50" height="50" alt="My pfp"></a>
-					<p>Feb 14, 2023</p>
-				</div>
-				<div class="post-content">
-					<img class="post-photo" src="res/images/juh.jpg">
-					<p>Felt cute, might delete later.</p>
-				</div>
-				<div class="post-footer">
-					<img class="like" src="res/images/Facebook_logo_thumbs_up_like_transparent_SVG.svg">
-				</div>
-			</div>
-			<div class="post">
-				<div class="post-header">
-					<a class="post-logo" href="#"><img src="res/images/pfp.jpg" width="50" height="50" alt="My pfp"></a>
-					<p>Jun 7, 2024</p>
-				</div>
-				<div class="post-content">
-					<img class="post-photo" src="res/images/meme.jpg">
-					<p>truuuu</p>
-				</div>
-				<div class="post-footer">
-					<img class="like" src="res/images/Facebook_logo_thumbs_up_like_transparent_SVG.svg">
-				</div>
-			</div>
-		</div>
-		<div class="side-panel"> </div>
-	</div>
-	</div>
-	<div class="grid footer"></div>
+    <div class="grid header">
+        <ul class="nav">
+            <li><a href="index.html">Home</a></li>
+            <li> | </li>
+            <li><a href="addPost.html">addPost</a></li>
+        </ul>
+        <a class="logo" href="Login.html"><img src="res/images/pfp.jpg" width="50" height="50" alt="My pfp"></a>
+    </div>
+    <div class="grid content">
+        <div class="flex-container">
+            <div class="side-panel"> </div>
+            <div class="posts">
+                
+            </div>
+            <div class="side-panel"> </div>
+        </div>
+    </div>
+    <div class="grid footer"></div>
+
+    <script>
+        
+        async function fetchPosts() {
+            try {
+                
+                const response = await fetch('posts.json');
+
+                
+                // const response = await fetch('https://api.jsonbin.io/v3/b/6724d2b8acd3cb34a8a0a39b');
+
+                const posts = await response.json();
+
+                
+                const postsContainer = document.querySelector('.posts');
+                postsContainer.innerHTML = ''; 
+
+                
+                posts.forEach(post => {
+                    const postElement = document.createElement('div');
+                    postElement.classList.add('post');
+
+                    
+                    const postHeader = document.createElement('div');
+                    postHeader.classList.add('post-header');
+                    postHeader.innerHTML = `
+                        <a class="post-logo" href="#"><img src="res/images/pfp.jpg" width="50" height="50" alt="My pfp"></a>
+                        <p>${post.date}</p>
+                    `;
+
+                    
+                    const postContent = document.createElement('div');
+                    postContent.classList.add('post-content');
+                    if (post.image) {
+                        postContent.innerHTML = `<img class="post-photo" src="${post.image}" alt="Post image">`;
+                    }
+                    postContent.innerHTML += `<p>${post.content}</p>`;
+
+                    
+                    const postFooter = document.createElement('div');
+                    postFooter.classList.add('post-footer');
+                    postFooter.innerHTML = `
+                        <img class="like" src="res/images/Facebook_logo_thumbs_up_like_transparent_SVG.svg" alt="Like icon">
+                    `;
+
+                    
+                    postElement.appendChild(postHeader);
+                    postElement.appendChild(postContent);
+                    postElement.appendChild(postFooter);
+                    postsContainer.appendChild(postElement);
+                });
+            } catch (error) {
+                console.error('Error fetching posts:', error);
+            }
+        }
+
+        
+        fetchPosts();
+    </script>
 </body>
 </html>
