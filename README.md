@@ -7,5 +7,5 @@ TÜ Web Application Development homeworks, Group G (Marleen Rand, Anna-Liisa Jõ
 ## HOMEWORK 2
 
 ### Task 2: JSON validating
-- **website**: [JSONLint](https://jsonlint.com)
+- **website**: [validation_website](https://jsonlint.com)
 - **result**: JSON is valid!
