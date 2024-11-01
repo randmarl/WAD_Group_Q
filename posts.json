@@ -1,0 +1,62 @@
+[
+    {
+      "author": "John Doe",
+      "date": "2024-10-01",
+      "content": "Nice bridge!",
+      "image": "res/images/bridge.jpg"
+    },
+    {
+      "author": "Jane Smith",
+      "date": "2021-01-02",
+      "content": "Look... 👀",
+      "image": "res/images/mnt.jpg"
+    },
+    {
+      "author": "Alex Brown",
+      "date": "2022-10-02",
+      "content": "Blah-blah-blah...",
+      "image": null
+    },
+    {
+      "author": "Chris Green",
+      "date": "2023-02-14",
+      "content": "Felt cute, might delete later.",
+      "image": "res/images/juh.jpg"
+    },
+    {
+      "author": "Emily White",
+      "date": "2024-06-07",
+      "content": "truuuu",
+      "image": "res/images/meme.jpg"
+    },
+    {
+        "author": "John Doe",
+        "date": "2017-05-14",
+        "content": "Feeling bored... Going for a run!",
+        "image": null
+    },
+    {
+        "author": "Anna-Liisa Jõgi",
+        "date": "2019-11-12",
+        "content": "I <3 Estonia!!!",
+        "image": "res/images/swamp.jpg"
+    },
+    {
+        "author": "Marleen Rand",
+        "date": "2018-07-21",
+        "content": "dogs > cats",
+        "image": "res/images/dog.jpg"
+    },
+    {
+        "author": "Kim Lilii Tamm",
+        "date": "2022-03-18",
+        "content": "It is so big!",
+        "image": "res/images/tower.jpg"
+    },
+    {
+        "author": "Jane Smith",
+        "date": "2020-09-30",
+        "content": "Hey! I am looking for a job. I am an accountant.",
+        "image": null
+    }
+]
