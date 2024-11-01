@@ -89,5 +89,45 @@
 	</div>
 	</div>
 	<div class="grid footer"></div>
+	<script>
+		
+		const endpoint = 'https://api.jsonbin.io/v3/b/6724d2b8acd3cb34a8a0a39b';
+	
+		fetch(endpoint)
+		  .then(response => response.json())
+		  .then(data => {
+			const postsContainer = document.querySelector('.posts');
+			postsContainer.innerHTML = ''; 
+	
+			data.forEach(post => {
+			  
+			  const postElement = document.createElement('div');
+			  postElement.classList.add('post');
+	
+			  const postHeader = `
+				<div class="post-header">
+				  <a class="post-logo" href="#"><img src="res/images/pfp.jpg" width="50" height="50" alt="Author's photo"></a>
+				  <p>${post.date}</p>
+				</div>`;
+	
+			  const postContent = `
+				<div class="post-content">
+				  ${post.image ? `<img class="post-photo" src="${post.image}" alt="Post Image">` : ''}
+				  <p>${post.content}</p>
+				</div>`;
+	
+			  const postFooter = `
+				<div class="post-footer">
+				  <img class="like" src="res/images/Facebook_logo_thumbs_up_like_transparent_SVG.svg" alt="Like Icon">
+				</div>`;
+	
+			  postElement.innerHTML = postHeader + postContent + postFooter;
+			  postsContainer.appendChild(postElement);
+			});
+		  })
+		  .catch(error => {
+			console.error('Viga andmete toomisel:', error);
+		  });
+	  </script>
 </body>
 </html>
