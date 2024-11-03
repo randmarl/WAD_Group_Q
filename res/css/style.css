@@ -1,4 +1,23 @@
-
+.dropdown-menu {
+	display: none;
+	position: absolute;
+	background-color: #333;
+	padding: 10px;
+	right: 10px;
+	top: 60px;
+	z-index: 1;
+	border-radius: 5px;
+}
+.dropdown-menu.show {
+	display: block;
+}
+.dropdown-menu p, .dropdown-menu a {
+	color: white;
+	text-decoration: none;
+}
+.dropdown-menu a:hover {
+	background-color: #555;
+}
 nav {
     flex: 0 0 60px;
     background-color: #333;
