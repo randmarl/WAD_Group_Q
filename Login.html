@@ -37,39 +37,6 @@
 
     
     <script>
-        function validateForm() {
-            const password = document.getElementById('password').value;
-            const passwordError = document.getElementById('password-error');
-            const errors = [];
-
-            if (password.length < 8 || password.length >= 15) {
-                errors.push("Password must be 8-14 characters long.");
-            }
-            if (!/[A-Z]/.test(password[0])) {
-                errors.push("Password must start with an uppercase letter.");
-            }
-            if (!/[A-Z]/.test(password)) {
-                errors.push("Password must include at least one uppercase letter.");
-            }
-            if ((password.match(/[a-z]/g) || []).length < 2) {
-                errors.push("Password must include at least two lowercase letters.");
-            }
-            if (!/\d/.test(password)) {
-                errors.push("Password must include at least one numeric value.");
-            }
-            if (!/_/.test(password)) {
-                errors.push('Password must include the character "_".');
-            }
-
-            if (errors.length > 0) {
-                passwordError.style.display = "block";
-                passwordError.innerHTML = "The password is not valid:<br>" + errors.join("<br>");
-                return false;
-            }
-
-            passwordError.style.display = "none";
-            return true;
-        }
         function forgotPassword() {
             window.location.href = "ForgotPassword.html"; 
         }
